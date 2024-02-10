@@ -1,0 +1,314 @@
+{
+  "users": [
+    {
+      "id": 0,
+      "username": "greg",
+      "password": "boo",
+      "country": "UK"
+    },
+    {
+      "username": "marko501",
+      "password": "asd",
+      "country": "Serbia",
+      "id": 1
+    },
+    {
+      "username": "gloriaM",
+      "password": "manny",
+      "country": "Columbia",
+      "id": 2
+    },
+    {
+      "username": "",
+      "password": "",
+      "country": "Columbia",
+      "id": 2
+    }
+  ],
+  "books": [
+    {
+      "id": 0,
+      "title": "The Picture of Dorian Gray",
+      "author": "Oscar Wilde",
+      "externalLink": "https://www.amazon.com/s?k=The+Picture+of+Dorian+Gray",
+      "coverPath": "../../../assets/dorian-gray.jpg"
+    },
+    {
+      "id": 1,
+      "title": "Wuthering Heights",
+      "author": "Emily Bronte",
+      "externalLink": "https://www.amazon.com/s?k=wuthering+heights",
+      "coverPath": "../../../assets/wuthering-heights.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Frankenstein",
+      "author": "Mary Shelley",
+      "externalLink": "https://www.amazon.com/s?k=Frankenstein",
+      "coverPath": "../../../assets/frankenstein.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Jane Eyre",
+      "author": "Charlotte Bronte",
+      "externalLink": "https://www.amazon.com/s?k=jane+eyre",
+      "coverPath": "../../../assets/eyre.jpg"
+    }
+  ],
+  "themes": [
+    {
+      "id": 0,
+      "title": "Gothic Literature",
+      "description": "Gothic fiction is a loose literary aesthetic of fear and haunting. The name refers to Gothic architecture of the European Middle Ages, which was characteristic of the settings of early Gothic novels.",
+      "imagePath": "../../../assets/gothic.jpg",
+      "books": [
+        {
+          "id": 0,
+          "title": "The Picture of Dorian Gray",
+          "author": "Oscar Wilde",
+          "externalLink": "https://www.amazon.com/s?k=The+Picture+of+Dorian+Gray",
+          "coverPath": "../../../assets/dorian-gray.jpg"
+        },
+        {
+          "id": 1,
+          "title": "Wuthering Heights",
+          "author": "Emily Bronte",
+          "externalLink": "https://www.amazon.com/s?k=wuthering+heights",
+          "coverPath": "../../../assets/wuthering-heights.jpg"
+        },
+        {
+          "id": 2,
+          "title": "Frankenstein",
+          "author": "Mary Shelley",
+          "externalLink": "https://www.amazon.com/s?k=Frankenstein",
+          "coverPath": "../../../assets/frankenstein.jpg"
+        },
+        {
+          "id": 3,
+          "title": "Jane Eyre",
+          "author": "Charlotte Bronte",
+          "externalLink": "https://www.amazon.com/s?k=jane+eyre",
+          "coverPath": "../../../assets/eyre.jpg"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Modern Serbian Poetry",
+      "description": "Modern Serbian poetry gained a strong momentum after the First World War, fond of modernist and avant-garde poetic orientations, and the traces of that momentum are visible throughout the last century.",
+      "imagePath": "../../../assets/serbian.jpg",
+      "books": [
+        {
+          "id": 4,
+          "title": "Kora",
+          "author": "Vasko Popa",
+          "externalLink": "https://kontrastizdavastvo.rs/knjige/knjiga-kora-vasko-popa-27939",
+          "coverPath": "../../../assets/kora.jpg"
+        },
+        {
+          "id": 5,
+          "title": "Vatra i ništa",
+          "author": "Branko Miljković",
+          "externalLink": "https://www.delfi.rs/knjige/184892_vatra_i_nista_knjiga_delfi_knjizare.html",
+          "coverPath": "../../../assets/vatrainista.jpg"
+        },
+        {
+          "id": 6,
+          "title": "Utopljene duše",
+          "author": "Vladislav Petković Dis",
+          "externalLink": "https://www.delfi.rs/knjige/autor/4843_vladislav_petkovic_dis_delfi_knjizare.html",
+          "coverPath": "../../../assets/utopljene.jpg"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Dystopian Novels",
+      "description": "The dystopian novels Fahrenheit 451, 1984 and Brave New World show Bradbury, Orwell and Huxley’s vision of modern society. The authors include ideas of fear, technology and pleasure in a way that predicts how they see today’s society.",
+      "imagePath": "../../../assets/dystopia.jpg",
+      "books": [
+        {
+          "id": 7,
+          "title": "1984",
+          "author": "George Orwell",
+          "externalLink": "https://www.amazon.com/s?k=1984",
+          "coverPath": "../../../assets/1984.jpg"
+        },
+        {
+          "id": 8,
+          "title": "Fahrenheit 451",
+          "author": "Ray Bradbury",
+          "externalLink": "https://www.amazon.com/s?k=fahrenheit+451",
+          "coverPath": "../../../assets/fahren.jpg"
+        },
+        {
+          "id": 9,
+          "title": "Brave New World",
+          "author": "Aldous Huxley",
+          "externalLink": "https://www.amazon.com/s?k=brave+new+world",
+          "coverPath": "../../../assets/brave.jpg"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Introduction to Existentialism",
+      "description": "Existential literature, typically characterized by an individual who exists in a chaotic and seemingly meaningless environment, forces the protagonist to confront his/herself and determine his/her purpose in the world.",
+      "imagePath": "../../../assets/existentialism.jpg",
+      "books": [
+        {
+          "id": 10,
+          "title": "The Trial",
+          "author": "Franz Kafka",
+          "externalLink": "https://www.amazon.com/s?k=the+trial",
+          "coverPath": "../../../assets/trial.jpg"
+        },
+        {
+          "id": 11,
+          "title": "Nausea",
+          "author": "Jean-Paul Sartre",
+          "externalLink": "https://www.amazon.com/s?k=nausea",
+          "coverPath": "../../../assets/nausea.jpg"
+        },
+        {
+          "id": 12,
+          "title": "Myth of Sisyphus",
+          "author": "Albert Camus",
+          "externalLink": "https://www.amazon.com/s?k=myth+of+sisyphus",
+          "coverPath": "../../../assets/myth.jpg"
+        },
+        {
+          "id": 13,
+          "title": "Crime and Punishment",
+          "author": "Fyodor Dostoyevsky",
+          "externalLink": "https://www.amazon.com/s?k=crime+and+punishment",
+          "coverPath": "../../../assets/crimejpg.jpg"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Children's Literature",
+      "description": "Existential literature, typically characterized by an individual who exists in a chaotic and seemingly meaningless environment, forces the protagonist to confront his/herself and determine his/her purpose in the world.",
+      "imagePath": "../../../assets/childrens.jpg",
+      "books": [
+        {
+          "id": 14,
+          "title": "Harry Potter and the Philosopher's Stone",
+          "author": "J.K. Rowling",
+          "externalLink": "https://www.amazon.com/s?k=harry+potter+and+the+philosopher%27s+stone",
+          "coverPath": "../../../assets/potter.jpg"
+        },
+        {
+          "id": 15,
+          "title": "Peter Pan",
+          "author": "J. M. Barrie",
+          "externalLink": "https://www.amazon.com/s?k=peter+pan",
+          "coverPath": "../../../assets/peterpan.jpg"
+        },
+        {
+          "id": 16,
+          "title": "Little Women",
+          "author": "Louisa May Alcott",
+          "externalLink": "https://www.amazon.com/s?k=little+women",
+          "coverPath": "../../../assets/littlewomen.jpg"
+        },
+        {
+          "id": 17,
+          "title": "Alice In Wonderland",
+          "author": "Lewis Carroll",
+          "externalLink": "https://www.amazon.com/s?k=alice+in+wonderland+book",
+          "coverPath": "../../../assets/alice.jpg"
+        },
+        {
+          "id": 18,
+          "title": "Coraline",
+          "author": "Neil Gaiman",
+          "externalLink": "https://www.amazon.com/s?k=coraline",
+          "coverPath": "../../../assets/coraline.jpg"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Mystery Novels",
+      "description": "Existential literature, typically characterized by an individual who exists in a chaotic and seemingly meaningless environment, forces the protagonist to confront his/herself and determine his/her purpose in the world.",
+      "imagePath": "../../../assets/mystery.jpg",
+      "books": [
+        {
+          "id": 19,
+          "title": "Rebecca",
+          "author": "Daphne Du Maurier",
+          "externalLink": "https://www.amazon.com/s?k=rebecca+daphne+du+maurier",
+          "coverPath": "../../../assets/rebecca.jpg"
+        },
+        {
+          "id": 20,
+          "title": "The Murder of Roger Ackroyd",
+          "author": "Agatha Christie",
+          "externalLink": "https://www.amazon.com/s?k=murder+of+roger+ackroyd",
+          "coverPath": "../../../assets/roger.jpg"
+        },
+        {
+          "id": 21,
+          "title": "Dracula",
+          "author": "Bram Stoker",
+          "externalLink": "https://www.amazon.com/s?k=dracula",
+          "coverPath": "../../../assets/dracula.jpg"
+        },
+        {
+          "id": 22,
+          "title": "Gone Girl",
+          "author": "Gillian Flynn",
+          "externalLink": "https://www.amazon.com/s?k=gone+girl",
+          "coverPath": "../../../assets/gonegirl.jpg"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "Christmas Mood",
+      "description": "Existential literature, typically characterized by an individual who exists in a chaotic and seemingly meaningless environment, forces the protagonist to confront his/herself and determine his/her purpose in the world.",
+      "imagePath": "../../../assets/christmas.jpg",
+      "books": [
+        {
+          "id": 23,
+          "title": "A Christmas Carol",
+          "author": "Charles Dickens",
+          "externalLink": "https://www.amazon.com/s?k=christmas+carol",
+          "coverPath": "../../../assets/carol.jpg"
+        },
+        {
+          "id": 24,
+          "title": "How the Grinch Stole Christmas!",
+          "author": "Dr. Seuss",
+          "externalLink": "https://www.amazon.com/s?k=how+the+grinch+stole+christmas",
+          "coverPath": "../../../assets/grinch.jpg"
+        },
+        {
+          "id": 25,
+          "title": "Hercule Poirot's Christmas",
+          "author": "Agatha Christie",
+          "externalLink": "https://www.amazon.com/s?k=hercule+poirot+christmas",
+          "coverPath": "../../../assets/poirotschristmas.jpg"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "userId": 2,
+      "themeId": 0,
+      "rating": 4,
+      "comment": "I left a comment",
+      "id": 1
+    },
+    {
+      "userId": 2,
+      "themeId": 0,
+      "rating": 5,
+      "comment": "I left a comment",
+      "id": 2
+    }
+  ]
+}

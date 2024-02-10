@@ -1,0 +1,44 @@
+.theme-info-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.books-div {
+    display: flex;
+    flex-direction: row;
+}
+
+.theme-dropdown-div {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: fit-content;
+}
+
+.theme-dropdown-div h2 {
+    display: block;
+    color: wheat;
+    padding: 10px;
+    text-shadow: black 1px 1px 10px;
+}
+
+.theme-dropdown-div h2:hover {
+    background-color: rgba(34, 2, 2, 0.397);
+    width: fit-content;
+}
+
+.start-button{
+    height: 40px;
+    width: 150px;
+    margin: 20px;
+    position: relative;
+    bottom: 0;
+    background-color: wheat;
+}
+
+.theme-info-div label{
+    color: antiquewhite;
+    padding-left: 10px;
+
+}

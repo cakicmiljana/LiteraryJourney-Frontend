@@ -1,0 +1,33 @@
+@import '~@angular/material/theming';
+@include mat.core();
+@include mat.button();
+@include mat.ripple();
+
+$custom-wheat-palette: mat-define-palette(
+  (
+    50: #fefbf3,
+    100: #fdf8e6,
+    200: #fdefd8,
+    300: #fce6cb,
+    400: #fbdcc0,
+    500: #fbd2b4,
+    600: #fac8a8,
+    700: #f9be9d,
+    800: #f8b494,
+    900: #f6a889,
+    A100: #ffffff,
+    A200: #fff4e0,
+    A400: #ffe9c0,
+    A700: #ffdfab,
+  ),
+  500 // The default hue (500 is the default)
+);
+
+$custom-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $custom-wheat-palette, // Use your custom palette as the primary color
+      // Define other color palettes as needed (e.g., accent, warn)
+    ),
+  )
+);

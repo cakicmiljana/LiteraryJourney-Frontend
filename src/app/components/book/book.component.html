@@ -1,0 +1,19 @@
+<div class="book-item-div" *ngIf="book">
+            
+    <div id="overlay" (click)="biographyOverlay()"> 
+        <img src="../../../assets/wilde.jpg" width="128">
+    </div>
+    
+    <img src="{{ [book.coverPath] }}" width="128" height="195"
+        [ngStyle]="{'filter': completed ? 'brightness(10%)' : 'brightness(100%)'}"
+        />
+    <h3>{{ [book.title] }}</h3>
+    <h4 (click)="biographyOverlay()">
+        <ng-container *ngIf="isBiographyOn">
+
+        </ng-container>
+        {{ book.author }}</h4>
+    <a href="{{[book.externalLink]}}" target="_blank">
+        <button mat-stroked-button>Order Book</button>
+    </a>
+</div>

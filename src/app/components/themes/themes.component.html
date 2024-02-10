@@ -1,0 +1,7 @@
+<h2>Start your journey now!</h2>
+<h3>Select a theme:</h3>
+<div *ngFor="let theme of theme$ | async"> 
+    <ul>
+        <app-theme [theme]="theme"></app-theme>
+    </ul>
+</div>

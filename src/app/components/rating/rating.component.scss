@@ -1,0 +1,29 @@
+.stars-div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+    right: 40%;
+    width: 100%;
+}
+
+.comment-div {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    position: relative;
+    right: 35%;
+    width: 100%;
+}
+
+.star {
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    margin-right: 5px; /* Add some margin between stars to prevent cut-off */
+}
+
+.star:hover,
+.star:hover ~ .star {
+    color: yellow;
+}

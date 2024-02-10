@@ -1,0 +1,33 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$readingDiaryApp-primary: mat.define-palette(mat.$red-palette, 100);
+$readingDiaryApp-accent: mat.define-palette(mat.$red-palette, 900);
+
+$readingDiaryApp-warn: mat.define-palette(mat.$red-palette, 200);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$readingDiaryApp-theme: mat.define-dark-theme((
+  color: (
+    primary: $readingDiaryApp-primary,
+    accent: $readingDiaryApp-accent,
+    warn: $readingDiaryApp-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($readingDiaryApp-theme);
+
+/* You can add global styles to this file, and also import other style files */
+body {
+    padding: 20px;
+    background-image: 
+    linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), 
+    url("./assets/appback.jpg");
+    color: wheat;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
