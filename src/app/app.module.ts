@@ -34,6 +34,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { RecommendationComponent } from './components/recommendation/recommendation.component';
 import { LoginSignupComponent } from './components/login-signup/login-signup.component';
+import { CreateThemeComponent } from './components/create-theme/create-theme.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { LoginSignupComponent } from './components/login-signup/login-signup.com
     StatisticsComponent,
     RecommendationComponent,
     LoginSignupComponent,
-    LoginSignupComponent
+    LoginSignupComponent,
+    CreateThemeComponent
   ],
   imports: [
     BrowserModule,

@@ -10,15 +10,17 @@ import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { LoginSignupComponent } from './components/login-signup/login-signup.component';
+import { CreateThemeComponent } from './components/create-theme/create-theme.component';
 
 const routes: Routes = [
-  { path: 'menu', component: MenuBarComponent },
-  { path: 'themes', component: ThemesComponent },
-  { path: 'account', component: AccountComponent},
+  { path: 'app', component: MenuBarComponent },
+  { path: 'app/themes', component: ThemesComponent },
+  { path: 'app/account', component: AccountComponent},
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignupComponent},
-  { path: 'account/update', component: AccountUpdateComponent },
-  { path: 'statistics', component: StatisticsComponent },
+  { path: 'app/account/update', component: AccountUpdateComponent },
+  { path: 'app/statistics', component: StatisticsComponent },
+  { path: 'app/create-theme', component: CreateThemeComponent },
   { path: '', component: LoginSignupComponent }
 ];
 

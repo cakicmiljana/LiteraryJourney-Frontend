@@ -5,25 +5,31 @@
         <li>
           <mat-icon style="font-size: 30px;" color="accent">menu</mat-icon>
         </li>
-        <li><a routerLink="/themes">
+        <li><a routerLink="/app/themes">
           <button mat-raised-button color="accent">
             Browse All Journeys
-            <mat-icon color="wheat">home</mat-icon>
+            <mat-icon color="wheat">list_alt</mat-icon>
           </button>
         </a></li>
-        <li><a routerLink="/account">
+        <li><a routerLink="/app/create-theme">
+          <button mat-raised-button color="accent">
+            Create New Theme
+            <mat-icon color="wheat">library_add</mat-icon>
+          </button>
+        </a></li>
+        <li><a routerLink="/app/account">
           <button mat-raised-button color="accent">
             Account
             <mat-icon>account_box</mat-icon>
           </button>
         </a></li>
-        <li><a routerLink="/statistics">
+        <li><a routerLink="/app/statistics">
           <button mat-raised-button color="accent">
             Statistics
             <mat-icon>insert_chart</mat-icon>
           </button>
         </a></li>
-        <li><a (click)="logOut()">
+        <li><a (click)="logOut()" routerLink="/login">
           <button mat-raised-button color="accent">
             Log Out
             <mat-icon>logout</mat-icon>
