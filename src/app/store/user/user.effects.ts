@@ -6,11 +6,15 @@ import * as UserActions from './user.action'
 import { User } from 'src/app/models/user'
 import { Theme } from 'src/app/models/theme'
 import { Book } from 'src/app/models/book'
+import { RecursiveVisitor } from '@angular/compiler'
+import { ReviewService } from 'src/app/services/review.service'
+import { Review } from 'src/app/models/review'
 
 @Injectable()
 export class UserEffects {
     
-    constructor(private action$: Actions, private userService: UsersService) {
+    constructor(private action$: Actions, private userService: UsersService, 
+        private reviewService: ReviewService) {
 
     }
     
@@ -87,6 +91,33 @@ export class UserEffects {
                     tap((book) => {
                         console.log("book from effect: ", book)
                     }),
+                    catchError(() => of({ type: 'load error'}))
+                )
+            )
+        )
+    )
+
+    rateJourney$ = createEffect(() =>
+        this.action$.pipe(
+            ofType(UserActions.rateJourney),
+            mergeMap((action) => 
+                this.reviewService.leaveReview(action.review).pipe(
+                    map((review) => (UserActions.rateJourneySuccess({review: review} as {review: Review}))),
+                    tap((review) => {
+                        console.log("review from effect: ", review)
+                    }),
+                    catchError(() => of({ type: 'load error'}))
+                )
+            )
+        )
+    )
+
+    updateUserPassword$ = createEffect(() =>
+        this.action$.pipe(
+            ofType(UserActions.updateUserPassword),
+            mergeMap((action) => 
+                this.userService.updateUserPassword(action.userId, action.password).pipe(
+                    map(() => (UserActions.updateUserPasswordSuccess())),
                     catchError(() => of({ type: 'load error'}))
                 )
             )

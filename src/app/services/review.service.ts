@@ -32,7 +32,7 @@ export class ReviewService {
     return this.httpClient.get<Review[]>(this.reviewApi + '/GetAllReviews');
   }
 
-  leaveReview(userId: string, themeId: string, rating: number, comment: string) {
-    return this.httpClient.post(this.reviewApi + '/LeaveReview', {userId, themeId, rating, comment});
+  leaveReview(review: Review) {
+    return this.httpClient.post(this.reviewApi + '/LeaveReview', {userId: review.userId, themeId: review.themeId, rating: review.rating, comment: review.comment});
   }
 }

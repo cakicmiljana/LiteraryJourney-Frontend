@@ -20,8 +20,9 @@
         <div class="comment-div">
             <mat-form-field color="warn">
                 <mat-label>Leave a comment here</mat-label>
-                <input matInput>
+                <input matInput placeholder="comment" [(ngModel)]="comment" name="comment">
             </mat-form-field>
         </div>
+        <button mat-raised-button (click)="onRatingSelected()">Submit</button>
     <!-- </span> -->
 

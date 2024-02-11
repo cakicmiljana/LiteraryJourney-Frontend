@@ -14,17 +14,15 @@ export const UserReducer = createReducer(
             currentTheme: theme
         }
     }),
-    on(Actions.updateUserInfo, (state, {username, password, country}) => {
-        return {
-            ...state,
-            user: {
-                ...state.user,
-                username,
-                password,
-                country
-            }
-        }
-    }),
+    // on(Actions.updateUserPassword, (state, {password}) => {
+    //     return {
+    //         ...state,
+    //         user: {
+    //             ...state.user,
+    //             password
+    //         }
+    //     }
+    // }),
     on(Actions.getUserInfo, (state) => {
         return {
             ...state
@@ -49,6 +47,12 @@ export const UserReducer = createReducer(
                 reviews: []
             },
             completedThemes: CompletedThemesAdapter.addOne(theme, state.completedThemes)
+        }
+    }),
+    on(Actions.getCompletedThemesSuccess, (state, {themes}) => {
+        return {
+            ...state,
+            completedThemes: CompletedThemesAdapter.setAll(themes, state.completedThemes)
         }
     }),
     on(Actions.LoginSuccess, (state, {user}) => {
