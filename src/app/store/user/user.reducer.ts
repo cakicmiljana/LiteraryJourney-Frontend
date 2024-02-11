@@ -64,5 +64,11 @@ export const UserReducer = createReducer(
     }),
     on(Actions.Logout, (state) => {
         return initialState
+    }),
+    on(Actions.createThemeSuccess, (state, {id}) => {
+        return {
+            ...state,
+            createdThemeId: id
+        }
     })
 )

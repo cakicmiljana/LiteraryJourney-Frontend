@@ -19,7 +19,8 @@ export interface UserState {
     user: User,
     currentTheme: Theme,
     completedBooks: BooksState,
-    completedThemes: CompletedThemesState
+    completedThemes: CompletedThemesState,
+    createdThemeId: string
 }
 
 export const booksInitialState : BooksState = booksAdapter.getInitialState();
@@ -49,5 +50,6 @@ export const initialState: UserState = {
         reviews: []
     },
     completedBooks: booksInitialState,
-    completedThemes: completedThemesInitialState
+    completedThemes: completedThemesInitialState,
+    createdThemeId: ''
 }

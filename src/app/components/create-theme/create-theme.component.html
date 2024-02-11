@@ -1,1 +1,30 @@
 <app-menu-bar></app-menu-bar>
+<div class="theme">
+    <mat-form-field>
+        <mat-label>Theme Title</mat-label>
+        <input matInput [(ngModel)]="title" name="title"/>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field>
+        <mat-label>Theme Description</mat-label>
+        <input matInput [(ngModel)]="description" name="description"/>
+    </mat-form-field>
+    <br><br>
+    <mat-form-field>
+        <mat-label>Image URL</mat-label>
+        <input matInput [(ngModel)]="image" name="image"/>
+    </mat-form-field>
+    <br>
+    <button mat-raised-button color="accent" (click)="createTheme()">Create Theme</button>
+    
+    <h2>Choose books to add to your theme:</h2>
+    <div class="book-list">
+        <div *ngFor="let book of allBook$ | async">
+            <app-book [book]="book"></app-book>
+            <button mat-raised-button (click)="chooseBook(book)">CHOOSE BOOK</button>
+        </div>
+    </div>
+    <br>
+    <button mat-raised-button color="accent" (click)="addBooks()">Add Selected Books</button>
+    
+</div>

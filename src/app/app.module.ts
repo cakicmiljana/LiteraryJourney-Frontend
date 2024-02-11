@@ -35,6 +35,8 @@ import { StatisticsComponent } from './components/statistics/statistics.componen
 import { RecommendationComponent } from './components/recommendation/recommendation.component';
 import { LoginSignupComponent } from './components/login-signup/login-signup.component';
 import { CreateThemeComponent } from './components/create-theme/create-theme.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AddBooksThemeComponent } from './add-books-theme/add-books-theme.component';
 
 @NgModule({
   declarations: [
@@ -77,7 +79,8 @@ import { CreateThemeComponent } from './components/create-theme/create-theme.com
     MatFormFieldModule,
     MatIconModule,
     MatInputModule,
-    MatToolbarModule
+    MatToolbarModule,
+    BrowserAnimationsModule,
   ],
   bootstrap: [AppComponent]
 })

@@ -9,13 +9,13 @@ import { Book } from 'src/app/models/book'
 import { RecursiveVisitor } from '@angular/compiler'
 import { ReviewService } from 'src/app/services/review.service'
 import { Review } from 'src/app/models/review'
+import { ThemesService } from 'src/app/services/theme.service'
 
 @Injectable()
 export class UserEffects {
     
     constructor(private action$: Actions, private userService: UsersService, 
-        private reviewService: ReviewService) {
-
+        private reviewService: ReviewService, private themeServise: ThemesService) {
     }
     
     loginUser$ = createEffect(() =>
@@ -118,6 +118,39 @@ export class UserEffects {
             mergeMap((action) => 
                 this.userService.updateUserPassword(action.userId, action.password).pipe(
                     map(() => (UserActions.updateUserPasswordSuccess())),
+                    catchError(() => of({ type: 'load error'}))
+                )
+            )
+        )
+    )
+
+    createTheme$ = createEffect(() =>
+        this.action$.pipe(
+            ofType(UserActions.createTheme),
+            mergeMap((action) => 
+                this.themeServise.createThemeFromBody({title: action.title, 
+                    description: action.description, 
+                    imagePath: action.imagePath} as Theme)
+                .pipe(
+                    map((id) => (UserActions.createThemeSuccess({id, books: []} as {id: string, books: Book[]}))),
+                    tap((theme) => {
+                        console.log("theme from effect: ", theme)
+                    }),
+                    catchError(() => of({ type: 'load error'}))
+                )
+            )
+        )
+    )
+
+    addBooksToTheme$ = createEffect(() =>
+        this.action$.pipe(
+            ofType(UserActions.addBookToTheme),
+            mergeMap((action) => 
+                this.themeServise.addBookToTheme(action.themeId, action.bookId).pipe(
+                    map(() => (UserActions.addBookToThemeSuccess())),
+                    tap(() => {
+                        console.log("book added to theme")
+                    }),
                     catchError(() => of({ type: 'load error'}))
                 )
             )

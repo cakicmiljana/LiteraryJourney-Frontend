@@ -24,3 +24,7 @@ export const getCompletedThemes = createAction('Get Completed Themes', props<{us
 export const getCompletedThemesSuccess = createAction('Get Completed Themes Success', props<{themes: Theme[]}>());
 export const rateJourney = createAction('Rate Journey', props<{review: Review}>());
 export const rateJourneySuccess = createAction('Rate Journey Success', props<{review: Review}>());
+export const createTheme = createAction('Create Theme', props<{title: string, description: string, imagePath: string, books: Book[]}>());
+export const createThemeSuccess = createAction('Create Theme Success', props<{id: string, books: Book[]}>());
+export const addBookToTheme = createAction('Add Book To Theme', props<{themeId: string, bookId: string}>());
+export const addBookToThemeSuccess = createAction('Add Book To Theme Success');

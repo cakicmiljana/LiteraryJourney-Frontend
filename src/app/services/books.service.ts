@@ -7,7 +7,7 @@ import { Book } from '../models/book';
 })
 export class BooksService {
 
-  private bookApi = "http://localhost:5122" + '/Books';
+  private bookApi = "http://localhost:5122" + '/Book';
 
   constructor(private httpClient: HttpClient) {
 
@@ -31,6 +31,10 @@ export class BooksService {
 
   getAllBooksByGenre() {
     return this.httpClient.get<Book[]>(this.bookApi + '/GetAllBooksByGenre');
+  }
+
+  getAllBooks() {
+    return this.httpClient.get<Book[]>(this.bookApi + '/GetAllBooks');
   }
 
   deleteBook(id: string) {

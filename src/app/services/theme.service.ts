@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Book } from '../models/book';
 import { environment } from 'src/environments/environment';
@@ -17,9 +17,29 @@ export class ThemesService {
 
   }
   
-  createTheme(theme: Theme) {
-    return this.httpClient.post<Theme>(this.themeApi + '/CreateTheme', theme)
+  createThemeFromBody(theme: Theme) {
+    const reqHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+
+    return this.httpClient.post(this.themeApi + '/CreateTheme', {
+      title: theme.title,
+      description: theme.description,
+      imagePath: theme.imagePath
+      }, {headers: reqHeaders, responseType: 'text'})
   }
+
+  createTheme(title: string, description: string, imagePath: string) {
+    const reqHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    
+    return this.httpClient.post(`${this.themeApi}/CreateTheme/${title}/${description}/${imagePath}`, {}, {headers: reqHeaders, responseType: 'text'})
+      }
+
+  createThemePromise(title: string, description: string, imagePath: string) {
+    return this.httpClient.post<string>(`${this.themeApi}/CreateTheme/${title}/${description}/${imagePath}`, {}).toPromise()
+      }
   
   getThemeById(id: string) {
     return this.httpClient.get<Theme>(`${this.themeApi}/GetThemeById/${id}`) 
@@ -47,6 +67,12 @@ export class ThemesService {
 
   addBookToTheme(themeId: string, bookId: string) {
     return this.httpClient.put(`${this.themeApi}/AddBookToTheme/${themeId}/${bookId}`, {})
+  }
+
+  addBooksToTheme(themeId: string, books: Book[]) {
+    for (let book of books)
+      this.addBookToTheme(themeId, book.id)
+    return new Observable() 
   }
 
   getReviews(themeId: string) {

@@ -13,6 +13,11 @@ export const selectCurrentThemeFeature = createSelector(
   (currentTheme) => currentTheme
 );
 
+export const selectCreatedThemeIdFeature = createSelector(
+  (state: AppState) => state.user.createdThemeId,
+  (createdThemeId) => createdThemeId
+);
+
 export const selectCompletedBooksFeature = createSelector(
   (state: AppState) => state.user.completedBooks,
   (books) => books
