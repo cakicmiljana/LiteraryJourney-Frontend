@@ -1,4 +1,4 @@
-<ng-component *ngIf="!userLoggedIn;then logIn; else loggedIn">
+<ng-component *ngIf="!userLoggedIn; then logIn; else loggedIn">
 </ng-component>
 
 <ng-template #logIn>
@@ -20,5 +20,5 @@
 </ng-template>
 
 <ng-template #loggedIn>
-    <app-menu-bar *ngIf="user && user.id !== -1" (logoutEvent)="handleLogout()"></app-menu-bar>
+    <app-menu-bar *ngIf="user" (logoutEvent)="handleLogout()"></app-menu-bar>
 </ng-template>

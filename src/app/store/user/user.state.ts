@@ -26,15 +26,27 @@ export const booksInitialState : BooksState = booksAdapter.getInitialState();
 export const completedThemesInitialState : CompletedThemesState = CompletedThemesAdapter.getInitialState();
 export const initialState: UserState = {
     user: {
-        id: -1,
+        id: '',
         username: "unknown",
         password: "unknown",
-        country: "unknown"
+        country: "unknown",
+        userType: "",
+        themeIDs: [],
+        books: [],
+        statistics: {
+            userId: "",
+            genres: new Map<string, number>(),
+            pages: new Map<string, number>(),
+            authors: new Map<string, number>(),
+            languages: new Map<string, number>(),
+        }
     },
     currentTheme: {
-        id: -1,
+        id: '',
         title: '',
-        books: []
+        books: [],
+        genres: [],
+        reviews: []
     },
     completedBooks: booksInitialState,
     completedThemes: completedThemesInitialState

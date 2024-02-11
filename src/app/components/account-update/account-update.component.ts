@@ -6,7 +6,7 @@ import { AppState } from 'src/app/app.state';
 import { User } from 'src/app/models/user';
 import { updateUserInfo } from 'src/app/store/user/user.action';
 import { selectUserFeature } from 'src/app/store/user/user.selector';
-import { UsersService } from '../../services/users.service';
+import { UsersService } from '../../services/user.service';
 
 @Component({
   selector: 'app-account-update',
@@ -15,7 +15,7 @@ import { UsersService } from '../../services/users.service';
 })
 export class AccountUpdateComponent {
   user:Observable<User> = of();
-  id: number=-1;
+  id: string = '';
   username = "";
   country = "";
   password = "";
@@ -26,7 +26,7 @@ export class AccountUpdateComponent {
   
   ngOnInit() : void {
     this.user = this.store.select(selectUserFeature);
-    this.user.subscribe(user => {
+    this.user.subscribe((user: { id: string; username: string; country: string; password: string; }) => {
       this.id = user.id;
       this.username = user.username;
       this.country = user.country;
@@ -40,7 +40,7 @@ export class AccountUpdateComponent {
       country: this.country}))
 
       this.cdr.detectChanges();
-      this.service.saveUser(this.id);
+      // this.service.saveUser(this.id);
       event?.preventDefault();
   }
 }

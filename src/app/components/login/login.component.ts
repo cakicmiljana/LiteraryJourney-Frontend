@@ -5,7 +5,7 @@ import { User } from 'src/app/models/user';
 import { Login, Logout } from 'src/app/store/user/user.action';
 import { Observable, Subscription, of } from 'rxjs';
 import { selectUserFeature } from 'src/app/store/user/user.selector';
-import { UsersService } from 'src/app/services/users.service';
+import { UsersService } from 'src/app/services/user.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -28,23 +28,22 @@ export class LoginComponent {
   ngOnInit() : void {;
     
     this.user$ = this.store.select(selectUserFeature);
-    this.user$.subscribe(user => {
+    this.user$.subscribe((user: User | undefined) => {
       console.log("login ", user)
       this.user=user;
       
-      if (this.user && this.user.id !== -1) {
+      if (this.user && this.user.id !== '') {
         this.userLoggedIn = true;
       }
     })
   }
   
   Login() {
-    
     {
-      console.log("it is: ", this.username + this.password);
+      console.log(this.username + this.password + " logged in.");
     }
     this.store.dispatch(Login({username: this.username, password: this.password}))
-    // if(this.user && this.user.id!=-1) 
+    // if(this.user && this.user.id!=-1)
   }
 
   handleLogout() {

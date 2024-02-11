@@ -42,9 +42,11 @@ export const UserReducer = createReducer(
             ...state,
             completedBooks: booksAdapter.setAll([], state.completedBooks),
             currentTheme: {
-                id: -1,
+                id: '',
                 title: '',
-                books: []
+                books: [],
+                genres: [],
+                reviews: []
             },
             completedThemes: CompletedThemesAdapter.addOne(theme, state.completedThemes)
         }

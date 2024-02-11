@@ -1,10 +1,13 @@
 import { Theme } from "./theme";
 
 export interface Book {
-    id: number;
+    id: string;
     title: string;
     author: string;
+    pages: number;
+    language: string;
+    description: string;
     externalLink: string;
     coverPath: string;
-    literaryTheme?: Theme;
+    genres: string[];
 }

@@ -13,13 +13,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AccountComponent } from './components/account/account.component';
 import { AccountUpdateComponent } from './components/account-update/account-update.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { ThemesReducer } from './store/themes/themes.reducer';
 import { CurrentThemeComponent } from './components/current-theme/current-theme.component';
 import { AppState } from './app.state';
 import { ThemeComponent } from './components/theme/theme.component';
 import { UserReducer } from './store/user/user.reducer';
 import { EffectsModule } from '@ngrx/effects';
-import { ThemesEffects } from './store/themes/themes.effects';
 import { LoginComponent } from './components/login/login.component';
 import { UserEffects } from './store/user/user.effects';
 import { FormsModule } from '@angular/forms';
@@ -54,8 +52,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
     HttpClientModule,
     AppRoutingModule,
     FormsModule,
-    EffectsModule.forRoot([ThemesEffects, UserEffects]),
-    StoreModule.forRoot<AppState>({themes: ThemesReducer, user: UserReducer }),
+    EffectsModule.forRoot([UserEffects]),
+    StoreModule.forRoot<AppState>({user: UserReducer }),
     StoreDevtoolsModule.instrument({
       maxAge: 25,
       autoPause: true,

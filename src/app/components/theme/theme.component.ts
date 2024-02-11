@@ -1,9 +1,8 @@
 import { Component, Input, Output } from '@angular/core';
 import { AppState } from 'src/app/app.state';
 import { Store } from '@ngrx/store'
-import { ThemesService } from '../../services/themes.service'
+import { ThemesService } from '../../services/theme.service'
 import { Theme } from 'src/app/models/theme';
-import { selectTheme } from 'src/app/store/themes/themes.action';
 import { startJourney } from 'src/app/store/user/user.action';
 import { selectCurrentThemeFeature } from 'src/app/store/user/user.selector';
 import { ArrayDataSource } from '@angular/cdk/collections';

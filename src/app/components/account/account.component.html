@@ -17,7 +17,7 @@
     </div>
     <br>
     
-    <div class="current-journey-div" *ngIf="currentJourney && currentJourney.id != -1; else noJourney">
+    <div class="current-journey-div" *ngIf="currentJourney && currentJourney.id != ''; else noJourney">
         <h2>CURRENTLY READING</h2>
         <h2>{{currentJourney.title}}</h2>
         
