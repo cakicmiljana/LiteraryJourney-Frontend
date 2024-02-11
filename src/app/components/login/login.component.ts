@@ -18,6 +18,7 @@ export class LoginComponent {
   password = "";
   user$: Observable<User> = this.store.select(selectUserFeature);
   userLoggedIn: boolean = false;
+  userSignUp: boolean = false;
   user: User | undefined;
 
   constructor(private store: Store<AppState>, service: UsersService, private router: Router) {
@@ -44,6 +45,10 @@ export class LoginComponent {
     }
     this.store.dispatch(Login({username: this.username, password: this.password}))
     // if(this.user && this.user.id!=-1)
+  }
+
+  Signup() {
+    this.userSignUp = true;
   }
 
   handleLogout() {

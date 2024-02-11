@@ -19,6 +19,7 @@ export class SignupComponent {
   country = "";
   user$: Observable<User> = this.store.select(selectUserFeature);
   userLoggedIn: boolean = false;
+  userLogin: boolean = false;
   user: User | undefined;
 
   constructor(private store: Store<AppState>, service: UsersService, private router: Router) {
@@ -31,6 +32,10 @@ export class SignupComponent {
 
   Signup() {
     this.store.dispatch(Signup({username: this.username, password: this.password, country: this.country}))
+  }
+
+  Login() {
+    this.userLogin = true;
   }
 
 }
