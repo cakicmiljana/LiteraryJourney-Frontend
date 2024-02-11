@@ -1,7 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Book } from '../models/book';
-import { environment } from 'D:/LiteraryJourney-Frontend/LiteraryJourneyApp/src/environments/environment';
 
 @Injectable({
   providedIn: 'root'

@@ -8,13 +8,15 @@ import { AccountUpdateComponent } from './components/account-update/account-upda
 import { LoginComponent } from './components/login/login.component';
 import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
 import { SignupComponent } from './components/signup/signup.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 
 const routes: Routes = [
   { path: 'menu', component: MenuBarComponent },
   { path: 'themes', component: ThemesComponent },
   { path: 'account', component: AccountComponent},
   { path: 'signup', component: SignupComponent},
-  { path: 'account/update', component: AccountUpdateComponent }
+  { path: 'account/update', component: AccountUpdateComponent },
+  { path: 'statistics', component: StatisticsComponent }
 ];
 
 // configures NgModule imports and exports
