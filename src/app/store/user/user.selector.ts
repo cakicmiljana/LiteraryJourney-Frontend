@@ -43,3 +43,8 @@ export const selectCompletedThemesList = createSelector(
     .filter(theme => theme != null)
     .map(theme => <Theme>theme)
 );
+
+export const selectUserStatisticsFeature = createSelector(
+  (state: AppState) => state.user.user.statistics,
+  (statistics) => statistics
+);

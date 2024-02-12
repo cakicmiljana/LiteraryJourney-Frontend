@@ -1,1 +1,56 @@
-<p>statistics works!</p>
+<app-menu-bar></app-menu-bar>
+
+<div class="flex-div">
+    <div>
+
+        <ngx-charts-advanced-pie-chart
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="pagesData"
+            [gradient]="gradient"
+            (select)="onSelect($event)"
+            (activate)="onActivate($event)"
+            (deactivate)="onDeactivate($event)">
+        </ngx-charts-advanced-pie-chart>
+
+        <ngx-charts-tree-map
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="genresData"
+            [gradient]="gradient"
+            [animations]="animations"
+            [labelFormatting]="labelFormatting"
+            (select)="onSelect($event)">
+        </ngx-charts-tree-map>
+
+    </div>
+
+    <div>
+
+        <ngx-charts-bar-horizontal
+            [view]="view"
+            [scheme]="colorScheme"
+            [results]="languagesData"
+            [gradient]="gradient"
+            [xAxis]="showXAxis"
+            [yAxis]="showYAxis"
+            [legend]="showLegend"
+            [showXAxisLabel]="showXAxisLabel"
+            [showYAxisLabel]="showYAxisLabel"
+            [xAxisLabel]="xAxisLabel"
+            [yAxisLabel]="yAxisLabel"
+            (select)="onSelect($event)"
+            (activate)="onActivate($event)"
+            (deactivate)="onDeactivate($event)">
+        </ngx-charts-bar-horizontal>
+
+        <ngx-charts-number-card
+            [view]="viewNumberCard"
+            [scheme]="colorScheme"
+            [results]="authorsData"
+            [cardColor]="cardColor"
+            (select)="onSelect($event)">
+        </ngx-charts-number-card>
+
+    </div>
+</div>
