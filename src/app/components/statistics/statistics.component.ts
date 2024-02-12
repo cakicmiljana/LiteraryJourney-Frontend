@@ -27,7 +27,7 @@ export class StatisticsComponent {
   languagesData: any;
   authorsData: any;
   view: [number, number] = [700, 400];
-  viewNumberCard: [number, number] = [700, 100];
+  viewNumberCard: [number, number] = [850, 300];
   
   gradient: boolean = true;
   showLegend: boolean = true;
