@@ -43,9 +43,9 @@ export class StatisticsComponent {
   xAxisLabel: string = 'Number of books';
 
   colorScheme: any = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#8b3252', '#6688bf', '#866a8e', '#8c4d57', '#9d8366']
   };
-  cardColor: string = '#232837';
+  cardColor: string = '#4f3800';
 
 
 
