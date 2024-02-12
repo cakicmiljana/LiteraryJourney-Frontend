@@ -54,5 +54,5 @@ export class CreateThemeComponent {
       for (let book of this.chosenBooks) {
         this.store.dispatch(addBookToTheme({themeId: this.newId, bookId: book.id}))
       }
-  }
+    }
 }

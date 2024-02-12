@@ -36,7 +36,8 @@ import { RecommendationComponent } from './components/recommendation/recommendat
 import { LoginSignupComponent } from './components/login-signup/login-signup.component';
 import { CreateThemeComponent } from './components/create-theme/create-theme.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AddBooksThemeComponent } from './add-books-theme/add-books-theme.component';
+import { AddBooksThemeComponent } from './components/add-books-theme/add-books-theme.component';
+import { NgxChartsModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { AddBooksThemeComponent } from './add-books-theme/add-books-theme.compon
     RecommendationComponent,
     LoginSignupComponent,
     LoginSignupComponent,
-    CreateThemeComponent
+    CreateThemeComponent,
+    AddBooksThemeComponent
   ],
   imports: [
     BrowserModule,
@@ -81,6 +83,7 @@ import { AddBooksThemeComponent } from './add-books-theme/add-books-theme.compon
     MatInputModule,
     MatToolbarModule,
     BrowserAnimationsModule,
+    NgxChartsModule
   ],
   bootstrap: [AppComponent]
 })

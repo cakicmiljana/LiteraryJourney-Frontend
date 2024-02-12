@@ -13,7 +13,7 @@ export class ReviewService {
   constructor(private httpClient: HttpClient) { }
 
   createReview(review: Review) {
-    return this.httpClient.post(this.reviewApi + '/CreateReview', review);
+    return this.httpClient.post(this.reviewApi + '/CreateReview', review, {responseType: 'text'});
   }
 
   getReviewById(id: string) {
@@ -29,10 +29,10 @@ export class ReviewService {
   }
 
   getAllReviews() {
-    return this.httpClient.get<Review[]>(this.reviewApi + '/GetAllReviews');
+    return this.httpClient.get<Review[]>(this.reviewApi + '/GetAllReviews', {responseType: 'json'});
   }
 
   leaveReview(review: Review) {
-    return this.httpClient.post(this.reviewApi + '/LeaveReview', {userId: review.userId, themeId: review.themeId, rating: review.rating, comment: review.comment});
+    return this.httpClient.post<Review>(this.reviewApi + '/LeaveReview', {userId: review.userId, themeId: review.themeId, rating: review.rating, comment: review.comment}, {responseType: 'json'});
   }
 }

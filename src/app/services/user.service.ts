@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { User } from '../models/user';
@@ -29,7 +29,11 @@ export class UsersService {
   }
 
   updateUserPassword(id: string, password: string) {
-    return this.httpClient.put<User>(`${this.userApi}/ChangePassword/${id}`, {password});
+    const reqHeaders = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+    
+    return this.httpClient.put(`${this.userApi}/ChangePassword/${id}`, {password}, {headers: reqHeaders, responseType: 'text'});
   }
 
   deleteUser(id: string) {
@@ -70,7 +74,7 @@ export class UsersService {
   }
 
   signupUser(user: User) {
-    return this.httpClient.post<User>(this.userApi + '/CreateUser', user);
+    return this.httpClient.post<User>(this.userApi + '/CreateUser', user, {responseType: 'json'});
   }
 
 }

@@ -1,1 +1,11 @@
-<p>add-books-theme works!</p>
+<app-recommendation></app-recommendation>
+<h2>Choose books to add to your theme:</h2>
+    <div class="book-list">
+        <div *ngFor="let book of allBook$ | async">
+            <app-book [book]="book"></app-book>
+            <button mat-raised-button (click)="chooseBook(book)">CHOOSE BOOK</button>
+        </div>
+    </div>
+    <br>
+    <button mat-raised-button color="accent" (click)="addBooks()">Add Selected Books</button>
+    

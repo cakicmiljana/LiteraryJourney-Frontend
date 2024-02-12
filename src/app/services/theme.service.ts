@@ -66,7 +66,9 @@ export class ThemesService {
   }
 
   addBookToTheme(themeId: string, bookId: string) {
-    return this.httpClient.put(`${this.themeApi}/AddBookToTheme/${themeId}/${bookId}`, {})
+    return this.httpClient.put(`${this.themeApi}/AddBookToTheme/${themeId}/${bookId}`, {},
+      {responseType: 'text'}
+    )
   }
 
   addBooksToTheme(themeId: string, books: Book[]) {

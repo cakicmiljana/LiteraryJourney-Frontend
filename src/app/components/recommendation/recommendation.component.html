@@ -1,1 +1,19 @@
-<p>recommendation works!</p>
+<app-menu-bar></app-menu-bar>
+<h2>Books based on your favourite genres</h2>
+<div class="book-list">
+    <div *ngFor="let book of recsGenre$ | async">
+        <app-book [book]="book"></app-book>
+        <!-- <button mat-raised-button (click)="chooseBook(book)">CHOOSE BOOK</button> -->
+    </div>
+</div>
+<br>
+
+<h2>Based on authors you love</h2>
+<div class="book-list">
+    <div *ngFor="let book of recsAuthor$ | async">
+        <app-book [book]="book"></app-book>
+        <!-- <button mat-raised-button (click)="chooseBook(book)">CHOOSE BOOK</button> -->
+    </div>
+</div>
+<br>
+<!-- <button mat-raised-button color="accent" (click)="addBooks()">Add Selected Books</button> -->

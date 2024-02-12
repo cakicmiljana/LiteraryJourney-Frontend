@@ -11,6 +11,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { StatisticsComponent } from './components/statistics/statistics.component';
 import { LoginSignupComponent } from './components/login-signup/login-signup.component';
 import { CreateThemeComponent } from './components/create-theme/create-theme.component';
+import { AddBooksThemeComponent } from './components/add-books-theme/add-books-theme.component';
+import { RecommendationComponent } from './components/recommendation/recommendation.component';
 
 const routes: Routes = [
   { path: 'app', component: MenuBarComponent },
@@ -20,7 +22,9 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent},
   { path: 'app/account/update', component: AccountUpdateComponent },
   { path: 'app/statistics', component: StatisticsComponent },
+  { path: 'app/recommendations', component: RecommendationComponent },
   { path: 'app/create-theme', component: CreateThemeComponent },
+  { path: 'app/createTheme/addBooks', component: AddBooksThemeComponent },
   { path: '', component: LoginSignupComponent }
 ];
 
